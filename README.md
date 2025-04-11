@@ -6,10 +6,9 @@ Using `bunx create-astro@latest` or `npx create-astro@latest` provides everythin
 
 The template includes:
 
-- [Tailwind CSS v4.1](https://tailwindcss.com/)
 - [Prettier](https://prettier.io/)
 - [Vue](https://vuejs.org/)
-- [Nuxt UI v3.0](https://ui.nuxt.com/)
+- [Nuxt UI v3.0](https://ui.nuxt.com/) - includes [Tailwind CSS v4.1](https://tailwindcss.com/)
 - Astro [View Transitions](https://docs.astro.build/en/guides/view-transitions/)
 - Astro [Import Aliases](https://docs.astro.build/en/guides/typescript/#import-aliases)
 - A default _MainLayout.astro_ layout file
