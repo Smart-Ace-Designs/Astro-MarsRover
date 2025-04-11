@@ -2,7 +2,7 @@
 
 **Mars Rover** is an opinionated Astro 5 starter template with built-in support for Vue, Nuxt UI, Tailwind CSS, Prettier, view transitions, and import aliases.
 
-Using `bunx create-astro@latest` or `npx create-astro@latest` provides everything you need to create a basic Astro application. However, it is missing a few useful items that I found myself manually adding to every Astro project I created. To address this problem, I created this template to automatically include these items plus support for Vue and Nuxt UI. Additionally, a custom PowerShell function was created to deploy this template and provide some additional functionality that the template cannot.
+Using `bunx create-astro@latest` or `npx create-astro@latest` provides everything you need to create a basic Astro application. However, it is missing a few useful items that I found myself manually adding to every Astro project I created. To address this problem, I created this template to automatically include these items plus support for Vue and Nuxt UI (for Vue components only). Additionally, a custom PowerShell function was created to deploy this template and provide some additional functionality that the template cannot.
 
 The template includes:
 
@@ -137,6 +137,10 @@ New-AstroProject -ProjectName project-name -Location parent-folder -Template ast
 ```
 
 ## Nuxt UI Notes
+
+Nuxt UI includes Tailwind CSS v4.1 by default and does not require a seperate installation/configuration of it in the Astro project.  Both Astro and Vue components can use Tailwind CSS as normal.
+
+Nuxt UI components are not supported in native Astro components.
 
 When using Nuxt UI with a Vue [Client Island](https://docs.astro.build/en/concepts/islands/#client-islands) component in Astro, it is recommended to wrap the HTML within the [`App`](https://ui.nuxt.com/components/app) component which provides global configuration for all components and is required for the `Toast` and `Tooltip` components.
 
