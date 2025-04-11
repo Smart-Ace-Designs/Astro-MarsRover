@@ -159,14 +159,12 @@ Inside of your Astro project you will see the following folders and files:
 ├── .gitignore
 ├── .prettierrc.mjs
 ├── astro.config.mjs
-├── auto-imports.d.ts
-├── components.d.ts
 ├── package.json
 ├── README.md
 └── tsconfig.json
 ```
 
-When deployed with the custom `New-AstroMoonbaseProject` PowerShell function, you will see the following folders and files:
+When deployed with the custom `New-AstroProject` PowerShell function, you will see the following folders and files:
 
 ```text
 /
@@ -188,8 +186,6 @@ When deployed with the custom `New-AstroMoonbaseProject` PowerShell function, yo
 ├── .gitignore
 ├── .prettierrc.mjs
 ├── astro.config.mjs
-├── auto-imports.d.ts
-├── components.d.ts
 ├── package.json
 ├── README.md
 └── tsconfig.json
