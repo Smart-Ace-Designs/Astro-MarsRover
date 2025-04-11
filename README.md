@@ -137,6 +137,63 @@ function New-AstroProject
 New-AstroProject -ProjectName project-name -Location parent-folder -Template astro-marsrover
 ```
 
+## Nuxt UI Notes
+
+When using Nuxt UI with a Vue [Client Island](https://docs.astro.build/en/concepts/islands/#client-islands) component in Astro, it is recommended to wrap the HTML within the [`App`](https://ui.nuxt.com/components/app) component which provides global configuration for all components and is required for the `Toast` and `Tooltip` components.
+
+```ts
+<!-- src/components/MyComponent.vue -->
+
+<script setup lang="ts">
+const toast = useToast();
+
+function showToast() {
+  toast.add({
+    title: "Welcome to Mars Rover.",
+    description: "An opinionated Astro template for use with Vue and Nuxt UI.",
+    icon: "i-lucide-rocket",
+  });
+}
+</script>
+
+<template>
+  <UApp :toaster="{ position: 'bottom-center' }">
+    <main class="flex h-screen items-center justify-center">
+      <UButton label="Welcome" color="neutral" variant="outline" @click="showToast" />
+    </main>
+  </UApp>
+</template>
+```
+
+Due to the nature of the Nuxt UI architecture, only the `client:only` directive is supported.
+
+```ts
+<!-- src/pages/index.astro -->
+
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import MyComponent from "@/components/MyComponent.vue";
+---
+
+<MainLayout title="Mars { } Rover">
+  <MyComponent client:only />
+</MainLayout>
+
+```
+
+To change the Nuxt UI default color mode from "dark" to "light", add `colorMode: false` to the __Vite__ object __plugins__ property in the "astro.config.mjs" file.
+
+```mjs
+<!-- astro.config.mjs -->
+
+export default defineConfig({
+  vite: {
+    plugins: [ui({ colorMode: false })],
+  },
+  integrations: [vue({ appEntrypoint: "/src/app.ts" })],
+});
+```
+
 ## Project Structure
 
 Inside of your Astro project you will see the following folders and files:
