@@ -18,7 +18,7 @@ The template includes:
 
 The PowerShell function:
 
-- Creates an additional empty folder: _assets_
+- Creates an additional empty folders: _assets_ and _components_
 - Blanks out the _README.md_ file
 - Runs the `prettier` CLI to provide an intial format of all project files
 - Initializes a _Git_ repository
@@ -140,7 +140,7 @@ New-AstroProject -ProjectName project-name -Location parent-folder -Template ast
 
 Nuxt UI includes Tailwind CSS v4.1 by default and does not require a separate installation/configuration of it in the Astro project.  Both Astro and Vue components can use Tailwind CSS as normal.
 
-Nuxt UI components are not supported in native Astro components.
+Nuxt UI components are not supported directly in native Astro files.
 
 When using Nuxt UI with a Vue [Client Island](https://docs.astro.build/en/concepts/islands/#client-islands) component in Astro, it is recommended to wrap the HTML within the [`App`](https://ui.nuxt.com/components/app) component which provides global configuration for all components and is required for the `Toast` and `Tooltip` components.
 
