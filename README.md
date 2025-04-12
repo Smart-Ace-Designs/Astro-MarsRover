@@ -138,7 +138,7 @@ New-AstroProject -ProjectName project-name -Location parent-folder -Template ast
 
 ## Nuxt UI Notes
 
-Nuxt UI includes Tailwind CSS v4.1 by default and does not require a seperate installation/configuration of it in the Astro project.  Both Astro and Vue components can use Tailwind CSS as normal.
+Nuxt UI includes Tailwind CSS v4.1 by default and does not require a separate installation/configuration of it in the Astro project.  Both Astro and Vue components can use Tailwind CSS as normal.
 
 Nuxt UI components are not supported in native Astro components.
 
