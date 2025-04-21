@@ -168,7 +168,7 @@ function showToast() {
 </template>
 ```
 
-Due to the nature of the Nuxt UI architecture, only the `client:only` directive is supported.
+Due to the nature of the Nuxt UI architecture, only the `client:only="vue"` directive is supported.
 
 ```ts
 <!-- src/pages/index.astro -->
@@ -179,7 +179,7 @@ import MyComponent from "@/components/MyComponent.vue";
 ---
 
 <MainLayout title="Mars { } Rover">
-  <MyComponent client:only />
+  <MyComponent client:only="vue" />
 </MainLayout>
 
 ```
