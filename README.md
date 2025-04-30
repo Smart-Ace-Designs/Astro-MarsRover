@@ -9,7 +9,7 @@ The template includes:
 - Astro [Import Aliases](https://docs.astro.build/en/guides/typescript/#import-aliases)
 - [Prettier](https://prettier.io/)
 - [Vue](https://vuejs.org/)
-- [Nuxt UI v3.1](https://ui.nuxt.com/) - includes [Tailwind CSS v4.1](https://tailwindcss.com/)
+- [Nuxt UI v3.0](https://ui.nuxt.com/) - includes [Tailwind CSS v4.1](https://tailwindcss.com/)
 - An _app.ts_ file that provides an alternate method for initializing and configuring Vue for allowing integration of the Nuxt UI plugin
 - A default _MainLayout.astro_ layout file
 - A default _global.css_ file
