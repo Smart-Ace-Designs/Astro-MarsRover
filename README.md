@@ -1,22 +1,22 @@
 # Astro Template: Mars Rover
-**Mars Rover** is an opinionated Astro 5 starter template with built-in support for Vue, Nuxt UI, Tailwind CSS, Prettier, view transitions, and import aliases.
+Astro **Mars Rover** is an opinionated Astro 5 starter template with built-in support for Vue, Nuxt UI, Tailwind CSS, Prettier, view transitions, and import aliases and includes a blank default "index.astro" page.
 
-Using `bunx create-astro@latest` or `npx create-astro@latest` provides everything you need to create a basic Astro application. However, it is missing a few useful items that I found myself manually adding to every Astro project I created. To address this problem, I created this template to automatically include these items plus support for Vue and Nuxt UI (for Vue components only). Additionally, a custom PowerShell function was created to deploy this template and provide some additional functionality that the template cannot.
+Using `create-astro@latest` provides everything you need to create a basic Astro application. However, it is missing a few useful items that you might find yourself manually adding to every new Astro project. The **Mars Rover** template was created to automatically include these items as well as support for Vue and Nuxt UI (for Vue components only). This provides a great starting point for a new Astro project with Vue client islands, Tailwind and Nuxt UI.
 
 The template includes:
-
-- [Prettier](https://prettier.io/)
-- [Vue](https://vuejs.org/)
-- [Nuxt UI v3.0](https://ui.nuxt.com/) - includes [Tailwind CSS v4.1](https://tailwindcss.com/)
+- An initial Astro project structure
 - Astro [View Transitions](https://docs.astro.build/en/guides/view-transitions/)
 - Astro [Import Aliases](https://docs.astro.build/en/guides/typescript/#import-aliases)
+- [Prettier](https://prettier.io/)
+- [Vue](https://vuejs.org/)
+- [Nuxt UI v3.1](https://ui.nuxt.com/) - includes [Tailwind CSS v4.1](https://tailwindcss.com/)
+- An _app.ts_ file that provides an alternate method for initializing and configuring Vue for allowing integration of the Nuxt UI plugin
 - A default _MainLayout.astro_ layout file
 - A default _global.css_ file
 - Default _.vscode_ files to properly handle Tailwind CSS, recommended extensions, and default Prettier formatters
 - The `dev` script set to `"astro dev --open"`
 
-The PowerShell function:
-
+An optional [PowerShell function](https://github.com/Smart-Ace-Designs/SmartAceDesigns.AstroLiftoff) (standalone or as part of a PowerShell module) is available to deploy the above template and provide the following additional functionality:
 - Creates an additional empty folders: _assets_ and _components_
 - Blanks out the _README.md_ file
 - Runs the `prettier` CLI to provide an intial format of all project files
@@ -30,18 +30,24 @@ The PowerShell function:
 ```sh
 bunx create-astro@latest -- --template smart-ace-designs/astro-marsrover project-name
 ```
-
 ### npm
 ```sh
 npx create-astro@latest -- --template smart-ace-designs/astro-marsrover project-name
 ```
-
+### pnpm
+```sh
+pnpm create astro@latest --template smart-ace-designs/astro-marsrover project-name
+```
+### yarn
+```sh
+yarn create astro@latest --template smart-ace-designs/astro-marsrover project-name
+```
 ### PowerShell
-A PowerShell module or a standalone function is available here:
+The optional PowerShell function and module are available here:
 [SmartAceDesigns.AstroLiftoff](https://github.com/Smart-Ace-Designs/SmartAceDesigns.AstroLiftoff)
 
 ```sh
-New-AstroProject -ProjectName project-name -Location parent-folder -Template astro-marsrover
+New-AstroProject -ProjectName project-name -Location parent-directory -Template astro-marsrover
 ```
 
 ## Using Nuxt UI Components
@@ -105,7 +111,7 @@ export default defineConfig({
 ```
 
 ## Project Structure
-Inside of your Astro project you will see the following folders and files:
+After deploying the Astro **Mars Rover** template you will see the following files and directories in your project root:
 
 ```text
 /
@@ -122,6 +128,7 @@ Inside of your Astro project you will see the following folders and files:
 │       └── index.astro
 |   ├── styles/
 │       └── global.css
+│   └── app.ts
 ├── .gitignore
 ├── .prettierrc.mjs
 ├── astro.config.mjs
@@ -130,29 +137,11 @@ Inside of your Astro project you will see the following folders and files:
 └── tsconfig.json
 ```
 
-When deployed with the custom `New-AstroProject` PowerShell function, you will see the following folders and files:
+The optional `New-AstroProject` PowerShell function will add these additional directories to your project root:
 
 ```text
 /
-├── .vscode/
-│       └── extensions.json
-│       └── launch.json
-│       └── settings.json
-├── public/
-│       └── favicon.svg
-├── src/
-|   ├── assets/
-|   ├── components/
-|   ├── layouts/
-│       └── MainLayout.astro
-│   ├── pages/
-│       └── index.astro
-|   ├── styles/
-│       └── global.css
-├── .gitignore
-├── .prettierrc.mjs
-├── astro.config.mjs
-├── package.json
-├── README.md
-└── tsconfig.json
+└── src/
+    ├── assets/
+    └── components/
 ```
