@@ -1,6 +1,6 @@
 # Astro Template: Mars Rover
 
-> Note: Nuxt UI 3.1 or newer is not support with this template. This is due to how Nuxt UI now handles the vue-router dependency. As of 05-01-2025 this template will no longer be maintained because of this change.
+> Note: Nuxt UI 3.1 or newer is not supported with this template. This is due to how Nuxt UI now handles the vue-router dependency. As of 05-01-2025 this template will no longer be maintained because of this change.
 
 Astro **Mars Rover** is an opinionated Astro 5 starter template with built-in support for Vue, Nuxt UI (3.0 only), Tailwind CSS, Prettier, view transitions, and import aliases and includes a blank default "index.astro" page.
 
