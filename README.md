@@ -1,6 +1,6 @@
 # Astro Template: Mars Rover
 
-> Note: Nuxt UI 3.1 or newer is not supported with this template. This is due to how Nuxt UI now handles the vue-router dependency. As of 05-01-2025 this template will no longer be maintained because of this change.
+> Note: Nuxt UI 3.1 or newer is not supported with this template. This is due to how Nuxt UI now handles the vue-router dependency. As of 05-01-2025 this template will no longer be maintained because of this change and should not be used.
 
 Astro **Mars Rover** is an opinionated Astro 5 starter template with built-in support for Vue, Nuxt UI (3.0 only), Tailwind CSS, Prettier, view transitions, and import aliases and includes a blank default "index.astro" page.
 
@@ -19,15 +19,6 @@ The template includes:
 - Default _.vscode_ files to properly handle Tailwind CSS, recommended extensions, and default Prettier formatters
 - The `dev` script set to `"astro dev --open"`
 
-An optional [PowerShell function](https://github.com/Smart-Ace-Designs/SmartAceDesigns.AstroLiftoff) (standalone or as part of a PowerShell module) is available to deploy the above template and provide the following additional functionality:
-- Creates an additional empty folders: _assets_ and _components_
-- Blanks out the _README.md_ file
-- Runs the `prettier` CLI to provide an intial format of all project files
-- Initializes a _Git_ repository
-- Automatically navigates to the project folder and peforms an initial install
-- Runs `astro update` to update the core Astro packages to the latest versions and runs your preferred package manager (npm or bun) to update the other packages
-- Provides an option to launch the site and/or open the project folder with VS Code post deployment
-
 ## Deployment Methods
 ### bun
 ```sh
@@ -45,14 +36,6 @@ pnpm create astro@latest --template smart-ace-designs/astro-marsrover project-na
 ```sh
 yarn create astro@latest --template smart-ace-designs/astro-marsrover project-name
 ```
-### PowerShell
-The optional PowerShell function and module are available here:
-[SmartAceDesigns.AstroLiftoff](https://github.com/Smart-Ace-Designs/SmartAceDesigns.AstroLiftoff)
-
-```sh
-New-AstroProject -ProjectName project-name -Location parent-directory -Template astro-marsrover
-```
-
 ## Using Nuxt UI Components
 Nuxt UI includes Tailwind CSS v4.1 by default and does not require a separate installation/configuration of it in the Astro project.  Both Astro and Vue components can use Tailwind CSS as normal.
 
