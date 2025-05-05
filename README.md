@@ -123,11 +123,3 @@ After deploying the Astro **Mars Rover** template you will see the following fil
 └── tsconfig.json
 ```
 
-The optional `New-AstroProject` PowerShell function will add these additional directories to your project root:
-
-```text
-/
-└── src/
-    ├── assets/
-    └── components/
-```
